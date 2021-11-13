@@ -25,6 +25,11 @@
 }
 
 @font-face {
+  font-family: 'Arial Rounded MT Bold';
+  src: url('/fonts/ArialRounded-MT-Bold.ttf');
+}
+
+@font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-Regular.woff2');
 }

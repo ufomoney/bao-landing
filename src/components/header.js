@@ -69,7 +69,7 @@ const StyledNavTitleWrapper = styled.nav`
 
 const HeaderText = styled.h2`
   color: ${({ theme }) => theme.textColor};
-  font-family: 'Reem Kufi', sans-serif;
+  font-family: Arial Rounded MT Bold;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.03em;

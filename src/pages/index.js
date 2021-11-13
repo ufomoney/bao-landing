@@ -31,13 +31,10 @@ const StyledBody = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 12rem;
-  margin-bottom: 4rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
   @media (max-width: 960px) {
     margin-bottom: 0;
     padding: 2rem;
-    padding-bottom: 8rem;
   }
 `
 
@@ -46,6 +43,7 @@ const StyledBodySubText = styled.h3`
   text-align: center;
   line-height: 160%;
   font-size: 1.25rem;
+  font-family: 'Noto Sans', sans-serif;
   @media (max-width: 640px) {
     text-align: left;
   }
@@ -59,6 +57,7 @@ const StyledBodyParagraph = styled.h3`
   @media (max-width: 640px) {
     text-align: left;
   }
+  margin-bottom: 1px;
 `
 
 const StyledProductImage = styled(Img)`
@@ -105,6 +104,9 @@ const StyledSectionFlex = styled.div`
     margin-bottom: 0.5rem;
   }
 `
+const StyledSpace = styled.div`
+  margin: 10px;
+`
 
 const StyledItemRow = styled.nav`
   align-items: center;
@@ -112,7 +114,9 @@ const StyledItemRow = styled.nav`
   flex-direction: column;
   flex-wrap: wrap;
   margin: 1.5rem;
+  margin-bottom: 1px;
   width: 100%;
+  font-family: 'Noto Sans', sans-serif;
   & > *:not(:first-of-type) {
     margin-top: 12px;
   }
@@ -182,7 +186,7 @@ const StyledLeftSubTitle = styled.h1`
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
-  font-family: 'Kaushan Script';
+  font-family: 'Noto Sans', sans-serif;
   letter-spacing: -0.025em;
   text-align: center;
   @media (min-width: 640px) {
@@ -272,15 +276,12 @@ const IndexPage = props => {
   return (
     <Layout path={props.location.pathname}>
       <BGCard></BGCard>
-      <SEO
-        title="Home"
-        path={props.location.pathname}
-        description={'Deliciously wrapped finance!'}
-      />
+      <SEO title="Home" path={props.location.pathname} description={'Deliciously wrapped finance!'} />
       <StyledBody>
         <EcosystemSection data={data} props={props} />
         <VisionSection data={data} props={props} />
         <RoadmapSection data={data} props={props} />
+        <StyledSpace />
         <SocialSection data={data} props={props} />
       </StyledBody>
       <BG />
@@ -295,12 +296,12 @@ const StyledSectionTitle = styled.h1`
   white-space: wrap;
   overflow-wrap: normal;
   max-width: 900px;
-  margin-top: 3rem;
+  margin-top: 1px;
   font-weight: 600;
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
-  font-family: 'Kaushan Script';
+  font-family: 'Noto Sans', sans-serif;
   letter-spacing: -0.025em;
   text-align: center;
 
@@ -309,12 +310,10 @@ const StyledSectionTitle = styled.h1`
     font-size: 2rem;
     line-height: 2.5rem;
     max-width: 600px;
-    margin-top: 4rem;
   }
   @media (max-width: 640px) {
     width: 100%;
     font-weight: 400;
-    margin-top: 4rem;
     text-align: left;
   }
 `
@@ -453,7 +452,6 @@ const SocialSection = props => {
 const VisionSection = props => {
   return (
     <>
-      <div style={{ marginTop: '3rem' }}></div>
       <StyledSectionTitle>The Bao Vision</StyledSectionTitle>
       <StyledBodyParagraph>
         <p>
